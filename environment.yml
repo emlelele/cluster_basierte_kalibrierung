@@ -1,0 +1,23 @@
+name: mwe_db_access
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python >= 3.8, < 3.10
+  - pip
+  - sqlalchemy < 1.4.0
+  - conda-forge::loguru
+  - conda-forge::dynaconf
+  - conda-forge::pandas < 1.4
+  - conda-forge::geopandas
+  - conda-forge::geoalchemy2
+  - conda-forge::psycopg2
+  - conda-forge::psycopg2-binary
+  - conda-forge::scikit-learn
+  - conda-forge::holidays
+  - conda-forge::openpyxl
+  - conda-forge::h5py
+  - conda-forge::tslearn>=0.6.0
+  -
+  - pip:
+      - -e .[dev]

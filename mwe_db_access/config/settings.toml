@@ -1,0 +1,29 @@
+[ssh-tunnel]
+name = "DE4"
+
+[ssh-tunnel.DE3]
+LOCAL_PORT = 59701
+LOCAL_ADDRESS = "localhost"
+REMOTE_PORT = 59798
+USER = "RL-INSTITUT\\kilian.helfenbein"
+HOST = "192.168.11.207"
+
+[ssh-tunnel.DE4]
+LOCAL_PORT = 59701
+LOCAL_ADDRESS = "localhost"
+REMOTE_PORT = 59799
+USER = "RL-INSTITUT\\emre.basbolat"
+HOST = "192.168.11.207"
+
+[database]
+schemas = ["demand","grid"]
+scenario = "status2023"
+country = "DE"
+carrier = "AC"
+
+[database.credentials]
+POSTGRES_USER = "egon"
+POSTGRES_PASSWORD = "data"
+HOST = "127.0.0.1"
+PORT = 59701
+POSTGRES_DB = "egon-data"
