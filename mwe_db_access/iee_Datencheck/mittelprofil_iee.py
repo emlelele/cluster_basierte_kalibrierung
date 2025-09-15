@@ -1015,6 +1015,8 @@ plt.ylabel("Last [Wh]")
 plt.xlabel("Stunde der Woche")
 plt.ylabel("Last [Wh]")
 plt.title("Vergleich: Durchschnittliche Woche (iee) vs. Durchschnittliche Woche (H25)")
+plt.xticks(range(0, 169, 24), [str(i) for i in range(0, 169, 24)])
+
 plt.legend()
 plt.grid(True, linestyle="--", alpha=0.5)
 plt.tight_layout()
