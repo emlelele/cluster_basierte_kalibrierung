@@ -30,6 +30,7 @@ graph LR
     D --> E[Global energy adjustment (optional)]
     E --> F[Apply to all profiles (CSV batches)]
     F --> G[Sensitivity & validation (plots, metrics)]
+```
 
 * **Ziel:** Formtreue Kalibrierung großer synthetischer Datensätze gegenüber einem Referenz-SLP.
 * **Kernidee:** Cluster-Mittelprofile dienen als Basis; pro Stunde werden skalierende Faktoren `α_i(t)` für jedes Cluster bestimmt und auf alle Einzelprofile zurückgespielt.
