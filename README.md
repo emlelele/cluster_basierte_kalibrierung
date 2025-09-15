@@ -23,14 +23,13 @@ Kalibriere \~100 000 synthetische Haushaltslastprofile gegen ein Referenz-SLP (B
 ## Überblick
 
 ```mermaid
-flowchart LR
-    A[DB: iee_household_load_profiles] --> B[Clustering<br/>MiniBatchKMeans]
-    B --> C[Cluster-Mittelprofile (K×8760)]
-    C --> D[Kalibrierung α(t)<br/>LSQ mit/ohne Bounds]
-    D --> E[Globale Nachjustierung (optional)]
-    E --> F[Anwendung auf alle Profile<br/>Batch-Export CSV]
-    F --> G[Sensitivität / Validierung<br/>Plots & Metriken]
-```
+graph LR
+    A[DB: iee_household_load_profiles] --> B[Clustering (MiniBatchKMeans)]
+    B --> C[Cluster means (Kx8760)]
+    C --> D[Calibration alpha(t) via LSQ]
+    D --> E[Global energy adjustment (optional)]
+    E --> F[Apply to all profiles (CSV batches)]
+    F --> G[Sensitivity & validation (plots, metrics)]
 
 * **Ziel:** Formtreue Kalibrierung großer synthetischer Datensätze gegenüber einem Referenz-SLP.
 * **Kernidee:** Cluster-Mittelprofile dienen als Basis; pro Stunde werden skalierende Faktoren `α_i(t)` für jedes Cluster bestimmt und auf alle Einzelprofile zurückgespielt.
