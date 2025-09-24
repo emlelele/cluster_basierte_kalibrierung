@@ -119,3 +119,8 @@ python mwe_db_access/cluster_basierte_kalibrierung/Validierung.py
 ## Ein Satz zur Methode
 
 Die Profile werden in **K** Gruppen geclustert. Für jede Stunde werden je Cluster **Skalierungsfaktoren** bestimmt, damit die **Summe** aller Profile dem SLP zeitlich besser folgt (mit Grenzen, damit die Form pro Cluster realistisch bleibt). Optional wird am Ende die **Jahresenergie** global korrigiert.
+
+
+ChatGPT diente bei der Entwicklung des Codes als Hilfsmittel. Alle Ergebnisse wurden eigenständig kontrolliert und bearbeitet.
+
+
